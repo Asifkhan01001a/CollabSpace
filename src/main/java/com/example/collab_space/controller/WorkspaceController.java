@@ -69,5 +69,8 @@ public class WorkspaceController {
         }
     }
 
-//    [1,2,"abc"]
+    @GetMapping
+    public ResponseEntity listOfWorkSpace(@RequestParam("email") String email){
+
+    }
 }

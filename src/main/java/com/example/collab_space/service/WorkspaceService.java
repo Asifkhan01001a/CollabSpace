@@ -228,6 +228,22 @@ public class WorkspaceService {
 
     }
 
+    public void listOfWorkSpace(String email) {
+        User user = userRepository.findByEmail(email);
+
+        if(user == null){
+            throw new RuntimeException("User not found");
+        }
+
+        if(!user.isActive()){
+            throw new RuntimeException("Inactive account");
+        }
+
+        List<WorkspaceMember> list = workspaceMemberRepo.findByUser(user);
+        List<Workspace>
+
+    }
+
 
     // User already exists kar sakta hai app mei
     // New user will be invited
